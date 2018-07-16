@@ -1,8 +1,8 @@
 import parseImageId from './parseImageId.js';
 import fileManager from './fileManager.js';
 
-function loadFileRequest (uri) {
-  const parsedImageId = parseImageId(uri);
+function loadFileRequest (uri, imageId) {
+  const parsedImageId = parseImageId(imageId);
   const fileIndex = parseInt(parsedImageId.url, 10);
   const file = fileManager.get(fileIndex);
 
